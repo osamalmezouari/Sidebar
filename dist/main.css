@@ -1,0 +1,139 @@
+/** @format */
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  text-decoration: none;
+  margin: 0px;
+  list-style: none;
+}
+
+/** @format */
+/** @format */
+body {
+  margin: auto;
+  background-color: hsl(206, 100%, 97%);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.bars {
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  grid-template-rows: 60px;
+  padding: 20px;
+}
+.bars > i {
+  grid-area: 1/2;
+  color: hsl(205, 78%, 60%);
+  text-align: center;
+  align-self: center;
+  cursor: pointer;
+  font-size: 30px;
+}
+.bars > i:hover {
+  color: hsl(205, 65%, 75%);
+}
+
+.sidebar {
+  width: 30%;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  position: absolute;
+  top: 0;
+  left: -30%;
+  background-color: white;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 80px 60px 1fr 100px;
+}
+@keyframes leftShowElement {
+  from {
+    left: -30%;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes leftHideElement {
+  from {
+    left: 0;
+  }
+  to {
+    left: -30%;
+  }
+}
+.sidebar > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: 1;
+  padding: 20px;
+}
+.sidebar > div > h1 {
+  margin: 10px 0px;
+  letter-spacing: 3px;
+}
+.sidebar > div > h1 > span {
+  color: hsl(205, 78%, 60%);
+}
+.sidebar > div > i {
+  font-size: 16px;
+  color: rgb(188, 17, 17);
+  cursor: pointer;
+}
+.sidebar > .sections {
+  grid-area: 3;
+}
+.sidebar > .sections a {
+  display: block;
+  padding: 20px 10px;
+  color: hsl(210, 22%, 49%);
+  font-size: 24px;
+}
+@keyframes paddingLeft {
+  from {
+    padding-left: 10px;
+  }
+  to {
+    padding-left: 20px;
+  }
+}
+.sidebar > .sections a:hover {
+  background-color: hsl(206, 61%, 84%);
+  color: hsl(205, 83%, 75%);
+  animation-name: paddingLeft;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+.sidebar .sociallinks {
+  grid-area: 4;
+  display: flex;
+  padding: 0px 25%;
+  justify-content: space-between;
+  font-size: 25px;
+}
+.sidebar .sociallinks a i {
+  color: hsl(205, 78%, 60%);
+}
+
+@media (max-width: 950px) {
+  .sidebar {
+    width: 100%;
+    left: -100%;
+  }
+  @keyframes leftShowElement {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 0;
+    }
+  }
+  @keyframes leftHideElement {
+    from {
+      left: 0;
+    }
+    to {
+      left: -100%;
+    }
+  }
+}/*# sourceMappingURL=main.css.map */

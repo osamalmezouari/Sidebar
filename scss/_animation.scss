@@ -1,0 +1,33 @@
+/** @format */
+@mixin paddingLeft($start, $end) {
+	@keyframes paddingLeft {
+		from {
+			padding-left: #{$start}px;
+		}
+		to {
+			padding-left: #{$end}px;
+		}
+	}
+}
+
+@mixin leftHideElement($start, $end) {
+	@keyframes leftHideElement {
+		from {
+			left: $end;
+		}
+		to {
+			left: $start;
+		}
+	}
+}
+@mixin leftShowElement($start, $end) {
+	@keyframes leftShowElement {
+		from {
+			left: $start;
+		}
+		to {
+			left: $end;
+		}
+	}
+}
+
