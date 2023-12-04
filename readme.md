@@ -18,8 +18,7 @@ This project implements a responsive sidebar using TypeScript, HTML, and Sass. I
 
 ## Getting Started
 
-1. **Clone the Repository:**
-    git clone <repository_url>
+1. **Clone the Repository**
 
 2. **Compile Sass to CSS:**
 - Use a Sass compiler to convert the Sass files to CSS. For example, using `sass` command-line tool: 
